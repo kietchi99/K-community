@@ -1,0 +1,37 @@
+{
+  "name": "back-end",
+  "version": "1.0.0",
+  "description": "k community",
+  "main": "main.js",
+  "scripts": {
+    "start": "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kietchi99/K-community.git"
+  },
+  "keywords": [
+    "blog",
+    "comunity",
+    "k community",
+    "dev"
+  ],
+  "author": "kietchi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kietchi99/K-community/issues"
+  },
+  "homepage": "https://github.com/kietchi99/K-community#readme",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "mongodb": "^6.8.0"
+  },
+  "devDependencies": {
+    "morgan": "^1.10.0",
+    "nodemon": "^3.1.4"
+  }
+}
