@@ -5,6 +5,8 @@ const bodyParser = require("body-parser");
 
 const userRouter = require("./routes/user");
 const authRouter = require("./routes/auth");
+const AppError = require("./appError");
+const globalErrorHandler = require("./controllers/error");
 //const articleRouter = require("./routes/article");
 //const commentRouter = require("./routes/comment");
 
@@ -34,5 +36,11 @@ app.use("/api/v1/auth", authRouter);
 app.get("/", function (req, res) {
   res.send("Hello Buddy");
 });
+
+app.all("*", (req, res, next) => {
+  next(new AppError(`Can't find ${req.originalUrl} on this server`, 404));
+});
+
+app.use(globalErrorHandler);
 
 module.exports = app;
